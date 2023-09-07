@@ -1,3 +1,4 @@
+import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 import { LoginComponent } from './components/login/login.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,7 +15,9 @@ const routes: Routes = [
     canActivate: [AuthGuard], //guardião das rotas, para verificar se o token é válido ou não
     children: [ // rotas filhas
       {path: 'home', component: HomeComponent},
-      {path: 'tecnicos', component: TecnicoListComponent}
+
+      {path: 'tecnicos', component: TecnicoListComponent},
+      {path: 'tecnicos/create', component: TecnicoCreateComponent}
     ]
   }
 ];
