@@ -33,7 +33,8 @@
             mat-stroked-button 
             color="primary" 
             class="full-width mat-elevation-z3"
-            [disabled]="!validaCampos()">Login
+            [disabled]="!validaCampos()"
+            (click)="logar()">Login
         </button>
 
     </form>
