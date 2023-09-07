@@ -1,1 +1,52 @@
-<p>tecnico-create works!</p>
+<div class="container mat-elevation-z2">
+    <form class="form">
+        <!-- Título-->
+        <h1 class="fullWidth">Cadastrar Técnico</h1>
+
+        <!-- Imagem-->
+        <img src="assets/img/tecnico-create.svg" alt="Help Desk" class="fullWidth">
+
+        <!--Perfis-->
+        <section class="section">
+            <mat-checkbox class="margin">Admin</mat-checkbox>
+            <mat-checkbox class="margin">Cliente</mat-checkbox>
+            <mat-checkbox class="margin">Técnico</mat-checkbox>
+        </section>
+
+        <!-- Nome -->
+        <mat-form-field appearance="fill" class="fullWidth">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Fulano de tal">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <!-- CPF -->
+        <mat-form-field appearance="fill" class="fullWidth">
+            <mat-label>CPF</mat-label>
+            <input matInput placeholder="000.000.000-00">
+            <mat-icon matSuffix>pin</mat-icon>
+        </mat-form-field>
+
+        <!-- E-mail -->
+        <mat-form-field appearance="fill" class="fullWidth">
+            <mat-label>E-mail</mat-label>
+            <input matInput placeholder="fulano@mail.com">
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <!-- Senha -->
+        <mat-form-field appearance="fill" class="fullWidth">
+            <mat-label>Senha</mat-label>
+            <input matInput placeholder="123456" type="password">
+            <mat-icon matSuffix>password</mat-icon>
+        </mat-form-field>
+
+        <!--Botões-->
+        <!--Cadastrar-->
+        <button mat-flat-button color="primary" class="fullWidth mat-elevation-z3">Cadastrar</button>
+        <!--Cancelar-->
+        <button mat-stroked-button color="warn" class="fullWidth mat-elevation-z3">Cancelar</button>
+    </form>
+
+    <p class="fullWidth" >by Arthur Silva</p>
+</div>
