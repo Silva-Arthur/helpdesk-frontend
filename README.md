@@ -26,5 +26,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+ng g s services/auth
+ng g guard auth/auth
 npm i ngx-toastr@14.3.0 --save
 npm i @auth0/angular-jwt --save
+ng g interceptor interceptors/auth
