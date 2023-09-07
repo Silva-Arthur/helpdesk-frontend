@@ -31,3 +31,4 @@ ng g guard auth/auth
 npm i ngx-toastr@14.3.0 --save
 npm i @auth0/angular-jwt --save
 ng g interceptor interceptors/auth
+$ npm i --save ngx-mask@12.0.0
