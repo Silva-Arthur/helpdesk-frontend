@@ -1,1 +1,69 @@
-<p>tecnico-delete works!</p>
+<div class="container mat-elevation-z2">
+    <form class="form">
+        <!-- Título-->
+        <h1 class="fullWidth">Deletar Técnico</h1>
+
+        <!-- Imagem-->
+        <img src="assets/img/tecnico-create.svg" alt="Help Desk" class="fullWidth">
+
+        <!--Perfis-->
+        <section class="section">
+            <mat-checkbox [disabled]="true" [checked]="checkAdmin" class="margin" color="primary">Admin</mat-checkbox>
+            <mat-checkbox [disabled]="true" [checked]="checkCliente" class="margin" color="primary">Cliente</mat-checkbox>
+            <mat-checkbox [disabled]="true" [checked]="checkTecnico" class="margin" color="primary">Técnico</mat-checkbox>
+        </section>
+
+        <!-- Nome -->
+        <mat-form-field appearance="fill" class="fullWidth">
+            <mat-label>Nome</mat-label>
+            <input 
+                [(ngModel)]="tecnico.nome"
+                name="nome"
+                [disabled]="true"             
+                matInput >
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <!-- CPF -->
+        <mat-form-field appearance="fill" class="fullWidth">
+            <mat-label>CPF</mat-label>
+            <input 
+                [(ngModel)]="tecnico.cpf"
+                name="cpf"
+                [disabled]="true"             
+                matInput >
+            <mat-icon matSuffix>pin</mat-icon>
+        </mat-form-field>
+
+        <!-- E-mail -->
+        <mat-form-field appearance="fill" class="fullWidth">
+            <mat-label>E-mail</mat-label>
+            <input 
+                [(ngModel)]="tecnico.email"
+                name="email"
+                [disabled]="true"             
+                matInput >
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <!-- Senha -->
+        <mat-form-field appearance="fill" class="fullWidth">
+            <mat-label>Senha</mat-label>
+            <input 
+                [(ngModel)]="tecnico.senha"
+                name="senha"
+                [disabled]="true"       
+                type="password"      
+                matInput >
+            <mat-icon matSuffix>password</mat-icon>
+        </mat-form-field>
+
+        <!--Botões-->
+        <!--Atualizar-->
+        <button mat-flat-button color="primary" class="fullWidth mat-elevation-z3" (click)="delete()">Deletar</button>
+        <!--Cancelar-->
+        <button mat-stroked-button color="warn" class="fullWidth mat-elevation-z3" routerLink="../../">Cancelar</button>
+    </form>
+
+    <p class="fullWidth" >by Arthur Silva</p>
+</div>
