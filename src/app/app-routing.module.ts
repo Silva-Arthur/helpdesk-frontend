@@ -12,6 +12,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
+import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -32,7 +33,10 @@ const routes: Routes = [
       {path: 'clientes', component: ClienteListComponent},
       {path: 'clientes/create', component: ClienteCreateComponent},
       {path: 'clientes/update/:id', component: ClienteUpdateComponent},
-      {path: 'clientes/delete/:id', component: ClienteDeleteComponent}
+      {path: 'clientes/delete/:id', component: ClienteDeleteComponent},
+
+      //Chamados
+      {path: 'chamados', component: ChamadoListComponent}
     ]
   }
 ];
