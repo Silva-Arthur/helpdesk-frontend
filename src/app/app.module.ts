@@ -43,6 +43,7 @@ import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecn
 import { NgxMaskModule } from 'ngx-mask';
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
 import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
+import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecn
     ClienteCreateComponent,
     ClienteDeleteComponent,
     ClienteListComponent,
-    ClienteUpdateComponent
+    ClienteUpdateComponent,
+    ChamadoListComponent
   ],
   imports: [
     BrowserModule,
