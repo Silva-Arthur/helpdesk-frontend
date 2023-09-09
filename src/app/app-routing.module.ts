@@ -1,3 +1,4 @@
+import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { ChamadoCreateComponent } from './components/chamado-create/chamado-create.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
@@ -38,7 +39,8 @@ const routes: Routes = [
 
       //Chamados
       {path: 'chamados', component: ChamadoListComponent},
-      {path: 'chamados/create', component: ChamadoCreateComponent}
+      {path: 'chamados/create', component: ChamadoCreateComponent},
+      {path: 'chamados/update/:id', component: ChamadoUpdateComponent}
     ]
   }
 ];

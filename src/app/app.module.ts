@@ -45,6 +45,7 @@ import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecn
 import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 import { ChamadoCreateComponent } from './components/chamado-create/chamado-create.component';
+import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { ChamadoCreateComponent } from './components/chamado-create/chamado-crea
     ClienteListComponent,
     ClienteUpdateComponent,
     ChamadoListComponent,
-    ChamadoCreateComponent
+    ChamadoCreateComponent,
+    ChamadoUpdateComponent
   ],
   imports: [
     BrowserModule,
