@@ -3,24 +3,36 @@
     <img class="full-width" src="assets/img/chamado-create.svg" alt="Chamado image">
 
     <form class="form">
+        <!--Título-->
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Título do Chamado</mat-label>
-          <input matInput placeholder="Ex. Trocar bateria de celular">
+          <input 
+            [formControl]="titulo"
+            required
+            matInput 
+            placeholder="Ex. Trocar bateria de celular">
         </mat-form-field>
     </form>
     
     <div class="status-prioridade">
+        <!--Status-->
         <mat-form-field appearance="outline">
             <mat-label>Selecione um status</mat-label>
-            <mat-select>
+            <mat-select
+                [formControl]="status"
+                required>
               <mat-option value="0">ABERTO</mat-option>
               <mat-option value="1">EM ANDAMENTO</mat-option>
               <mat-option value="2">ENCERRADO</mat-option>
             </mat-select>
         </mat-form-field>
+
+        <!-- Prioridade-->
         <mat-form-field appearance="outline">
             <mat-label>Selecione uma prioridade</mat-label>
-            <mat-select>
+            <mat-select
+                [formControl]="prioridade"
+                required>
               <mat-option value="0">BAIXA</mat-option>
               <mat-option value="1">MÉDIA</mat-option>
               <mat-option value="2">ALTA</mat-option>
@@ -28,33 +40,49 @@
         </mat-form-field>
     </div>
 
+    <!--Tecnico-->
     <div class="tecnico">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Selecione um técnico</mat-label>
-            <mat-select>
+            <mat-select
+                [formControl]="tecnico"
+                required>
               <mat-option value="0">Valdir</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
 
+    <!--Cliente-->
     <div class="cliente">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Selecione um cliente</mat-label>
-            <mat-select>
+            <mat-select
+                [formControl]="cliente"
+                required>
               <mat-option value="0">Albert</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
 
+    <!--Descricao-->
     <form class="form">      
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Escreve uma descrição para o chamado</mat-label>
-          <textarea matInput placeholder="Ex. trocar tela do notebook trincada" class="descricao"></textarea>
+          <textarea 
+            matInput 
+            [formControl]="descricao"
+            required
+            placeholder="Ex. trocar tela do notebook trincada" 
+            class="descricao">
+          </textarea>
         </mat-form-field>
     </form>
       
-    <button mat-raised-button color="primary" class="full-width">Criar</button>
-    <button mat-stroked-button color="warn" class="full-width mat-elevation-z3">Cancelar</button>
+    <!--Botoes-->
+    <!--Criar-->
+    <button mat-raised-button color="primary" class="full-width" [disabled]="!validaCampos()">Criar</button>
+    <!--Adicionar-->
+    <button mat-stroked-button color="warn" class="full-width mat-elevation-z3">Voltar</button>
 
     <p  class="full-width">Desenvolvido por Arthur Silva</p>
 
