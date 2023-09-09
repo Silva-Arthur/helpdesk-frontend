@@ -1,5 +1,5 @@
 <div class="container mat-elevation-z3">
-    <h1 class="full-width">Atualizando Chamado</h1>
+    <h1 class="full-width">Visualizar Chamado</h1>
     <img class="full-width" src="assets/img/chamado-create.svg" alt="Chamado image">
 
     <form class="form">
@@ -7,11 +7,10 @@
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Título do Chamado</mat-label>
           <input 
-            [formControl]="titulo"
             [(ngModel)]="chamado.titulo"
             name="titulo"
-            required
             matInput 
+            [disabled]="true"
             placeholder="Ex. Trocar bateria de celular">
         </mat-form-field>
     </form>
@@ -21,10 +20,9 @@
         <mat-form-field appearance="outline">
             <mat-label>STATUS ({{retornaStatus(chamado.status)}})</mat-label>
             <mat-select
-                [formControl]="status"
+                [disabled]="true"
                 [(ngModel)]="chamado.status"
-                name="status"
-                required>
+                name="status">
               <mat-option value="0">ABERTO</mat-option>
               <mat-option value="1">EM ANDAMENTO</mat-option>
               <mat-option value="2">ENCERRADO</mat-option>
@@ -35,10 +33,9 @@
         <mat-form-field appearance="outline">
             <mat-label>PRIORIDADE ({{retornaPrioridade(chamado.prioridade)}})</mat-label>
             <mat-select
-                [formControl]="prioridade"
+                [disabled]="true"
                 [(ngModel)]="chamado.prioridade"
-                name="prioridade"
-                required>
+                name="prioridade">
               <mat-option value="0">BAIXA</mat-option>
               <mat-option value="1">MÉDIA</mat-option>
               <mat-option value="2">ALTA</mat-option>
@@ -51,14 +48,10 @@
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>TÉCNICO ({{chamado.nomeTecnico}})</mat-label>
             <mat-select
-                [formControl]="tecnico"
+                [disabled]="true"
                 [(ngModel)]="chamado.tecnico"
-                name="tecnico"
-                required>
-              <mat-option 
-                *ngFor="let tecnico of tecnicos"
-                value="{{tecnico.id}}">{{tecnico.nome}}
-              </mat-option>
+                name="tecnico">
+              <mat-option >{{chamado.nomeTecnico}}</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
@@ -68,14 +61,10 @@
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>CLEINTE ({{chamado.nomeCliente}})</mat-label>
             <mat-select
-                [formControl]="cliente"
+                [disabled]="true"
                 [(ngModel)]="chamado.cliente"
-                name="cliente"
-                required>
-              <mat-option 
-              *ngFor="let cliente of clientes"
-              value="{{cliente.id}}">{{cliente.nome}}
-              </mat-option>
+                name="cliente">
+              <mat-option>{{chamado.nomeCliente}}</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
@@ -85,21 +74,16 @@
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Escreve uma descrição para o chamado</mat-label>
           <textarea 
+            [disabled]="true"
             matInput 
-            [formControl]="observacoes"
             [(ngModel)]="chamado.observacoes"
             name="observacoes"
-            required
-            placeholder="Ex. trocar tela do notebook trincada" 
             class="observacoes">
           </textarea>
         </mat-form-field>
     </form>
       
     <!--Botoes-->
-    <!--Criar-->
-    <button mat-raised-button color="primary" class="full-width" [disabled]="!validaCampos()" (click)="update()">Atualizar</button>
-    
     <!--Adicionar-->
     <button mat-stroked-button color="warn" class="full-width mat-elevation-z3" routerLink="../../">Voltar</button>
 

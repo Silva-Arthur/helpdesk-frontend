@@ -1,9 +1,9 @@
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Chamado } from './../../models/chamado';
-import { TecnicoService } from './../../services/tecnico.service';
-import { Tecnico } from './../../models/tecnico';
-import { Cliente } from './../../models/cliente';
+import { Chamado } from '../../../models/chamado';
+import { TecnicoService } from '../../../services/tecnico.service';
+import { Tecnico } from '../../../models/tecnico';
+import { Cliente } from '../../../models/cliente';
 import { ChamadoService } from 'src/app/services/chamado.service';
 import { FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
